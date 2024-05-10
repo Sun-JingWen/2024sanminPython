@@ -1,0 +1,107 @@
+print("判斷三角形，請輸入整數")
+a=int(input("請輸入第一邊:"))
+b=int(input("請輸入第二邊:"))
+c=int(input("請輸入第三邊:"))
+print()
+print("結果為:**********")
+print()
+while True:
+    if a == b == c: #正三角形
+        print("是正三角形")
+        break
+    
+    if a*a + b*b ==c*c or a*a + c*c ==b*b or c*c + b*b ==a*a : #直角三角形
+
+        print("是直角三角形")
+        break
+    
+   if a == b or b == c or a == c: #等腰三角形
+        if a + b > c :
+            if a >= b and a - b < c :
+                print("是等腰三角形")
+            elif b >= a and b - a < c :
+                print("是等腰三角形")
+            else:
+              print("不是三角形") 
+            break
+
+        if a + c > b :
+            if a >= c and a - c < b :
+                print("是等腰三角形")
+            elif c >= a and c - a < b :
+                print("是等腰三角形")
+            else:
+                print("不是三角形") 
+            break
+   
+        if c + b > a :
+            if c >= b and c - b < a :
+                print("是等腰三角形")
+            elif b >= c and b - c < a :
+                print("是等腰三角形")
+            else:
+                print("不是三角形")  
+            break
+
+    if a*a + b*b < c*c or a*a + c*c < b*b or c*c + b*b < a*a :#鋭角三角形
+        if a + b > c : 
+            if a >= b and a - b < c :
+                print("是鋭角三角形")
+            elif b >= a and b - a < c :
+                print("是鋭角三角形")
+            else:
+              print("不是三角形") 
+            break
+        
+        if a + c > b :
+            if a >= c and a - c < b :
+                print("是鋭角三角形")
+            elif c >= a and c - a < b :
+                print("是鋭角三角形")
+            else:
+                print("不是三角形") 
+            break
+        
+        if c + b > a :
+            if c >= b and c - b < a :
+                print("是鋭角三角形")
+            elif b >= c and b - c < a :
+                print("是鋭角三角形")
+            else:
+                print("不是三角形")  
+            break
+        
+    if a*a + b*b > c*c or a*a + c*c > b*b or c*c + b*b > a*a :#鈍角三角形
+        if a + b > c : 
+            if a >= b and a - b < c :
+                print("是鈍角三角形")
+            elif b >= a and b - a < c :
+                print("是鈍角三角形")
+            else:
+              print("不是三角形") 
+            break
+        
+        if a + c > b :
+            if a >= c and a - c < b :
+                print("是鈍角三角形")
+            elif c >= a and c - a < b :
+                print("是鈍角三角形")
+            else:
+                print("不是三角形") 
+            break
+        
+        if c + b > a :
+            if c >= b and c - b < a :
+                print("是鈍角三角形")
+            elif b >= c and b - c < a :
+                print("是鈍角三角形")
+            else:
+                print("不是三角形")  
+            break
+
+    if a == b or a == c or b == c :#等腰直角三角形，不過不會三邊都是整數 1:1:√2
+        if a*a + b*b ==c*c or a*a + c*c ==b*b or c*c + b*b ==a*a : 
+            print("是等腰直角三角形")
+        break
+print()
+print("*******程式結束*******")
